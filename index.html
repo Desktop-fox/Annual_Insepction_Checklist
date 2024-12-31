@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Telescoping Boom Crane Annual Inspection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header: Company / Inspector Info -->
+  <header>
+    <div class="company-info">
+      <label for="companyName">Company Name</label>
+      <input type="text" id="companyName" placeholder="Enter Company Name">
+
+      <label for="equipmentType">Equipment Type</label>
+      <input type="text" id="equipmentType" placeholder="Telescoping Boom Crane">
+
+      <label for="inspectionDate">Date</label>
+      <input type="date" id="inspectionDate">
+
+      <label for="inspectorName">Inspector’s Name</label>
+      <input type="text" id="inspectorName" placeholder="Enter Inspector’s Name">
+    </div>
+  </header>
+
+  <!-- Main Checklist Table -->
+  <main>
+    <div class="table-container">
+      <table class="inspection-table">
+        <!-- Table Header (Sticky) -->
+        <thead>
+          <tr>
+            <th class="col-item">Inspection Item</th>
+            <th class="col-ref">Reference (OSHA / ASME)</th>
+            <th class="col-pass">Pass</th>
+            <th class="col-fail">Fail</th>
+            <th class="col-na">N/A</th>
+            <th class="col-pic">Picture</th>
+          </tr>
+        </thead>
+
+        <!-- 1. Boom Assembly (Telescoping Boom) -->
+        <tbody>
+          <tr class="category-row">
+            <td colspan="6"><strong>Boom Assembly (Telescoping Boom)</strong></td>
+          </tr>
+
+          <!-- Telescoping Boom Sections -->
+          <tr>
+            <td>
+              <strong>Telescoping Boom Sections</strong><br>
+              Inner Sections: Sliding sections that extend within each other.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(i)<br>ASME: Section 5-2.1.3(a)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Outer Section</em>: The largest, non-sliding part of the boom.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(i)<br>ASME: Section 5-2.1.3(a)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Wear Pads</em>: Reduce friction and protect boom sections during extension/retraction.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(iv)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Boom Cylinder -->
+          <tr>
+            <td>
+              <strong>Boom Cylinder</strong><br>
+              Piston Rod: Extends or retracts to push/pull boom sections.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(ii)<br>ASME: Section 5-2.1.3(j)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Cylinder Barrel</em>: Houses the hydraulic fluid and piston.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(l)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Boom Head -->
+          <tr>
+            <td>
+              <strong>Boom Head</strong><br>
+              Sheaves (Pulleys): Grooved wheels guiding the wire rope.
+            </td>
+            <td>OSHA: 1926.1413(c)(2)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Boom Point Roller Bearings</em>: Reduce friction at the boom tip.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(iii)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Load Block Attachments</em>: Connects load block or hook assembly.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(i)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Boom Base Section -->
+          <tr>
+            <td>
+              <strong>Boom Base Section</strong><br>
+              Mounting Pins: Connects the boom to the turntable.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(i)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Hydraulic Connections</em>: Supplies fluid for extension and retraction.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(j)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Boom Stops</em>: Prevent the boom from overextension or improper angle.
+            </td>
+            <td>OSHA: 1926.1416(d)<br>ASME: Section 5-2.1.3(n)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Extension Jibs -->
+          <tr>
+            <td>
+              <strong>Extension Jibs</strong><br>
+              Fixed Jibs: Permanently attached.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(i)<br>ASME: Section 5-2.1.3(a)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Luffing Jibs</em>: Adjustable angle extensions.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(i)<br>ASME: Section 5-2.1.3(a)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Pin Connections</em>: Fasteners to attach jibs to the boom.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(i)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Sheaves -->
+          <tr>
+            <td>
+              <strong>Sheaves</strong><br>
+              Groove Lining: Prevents wire rope wear.
+            </td>
+            <td>OSHA: 1926.1413(c)(2)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Sheave Bearings</em>: Allow smooth rotation.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(iii)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+        </tbody>
+
+        <!-- 2. Superstructure -->
+        <tbody>
+          <tr class="category-row">
+            <td colspan="6"><strong>Superstructure</strong></td>
+          </tr>
+
+          <!-- Turntable -->
+          <tr>
+            <td>
+              <strong>Turntable</strong><br>
+              Rotex Bearing: Supports rotation between carrier and superstructure.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(iv)<br>ASME: Section 5-2.1.3(a)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Drive Motors</em>: Powers the rotation mechanism.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(v)<br>ASME: Section 5-2.1.3(k)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Lubrication Channels</em>: Ensure smooth and long-lasting operation.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(xii)<br>ASME: Section 5-2.1.3(l)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Operator’s Cab -->
+          <tr>
+            <td>
+              <strong>Operator’s Cab</strong><br>
+              Control Levers: Operate boom, winch, and rotation.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(xiv)<br>ASME: Section 5-2.1.3(n)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Digital Display Panels</em>: Show load data and boom angles.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(x)<br>ASME: Section 5-2.1.6</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Cab Windows</em>: Reinforced glass for safety and visibility.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(xii)<br>ASME: Section 5-2.1.3(m)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Climate Controls</em>: Heating and cooling for operator comfort.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(xiv)<br>ASME: Section 5-2.1.3(n)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Counterweights -->
+          <tr>
+            <td>
+              <strong>Counterweights</strong><br>
+              Stackable Weights: Modular sections for varying lifting conditions.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(ix)<br>ASME: Section 5-2.1.3(o)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Attachment Mechanism</em>: Pins or hydraulic systems for securing weights.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(iv)<br>ASME: Section 5-2.1.3(p)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Lifting Eyes</em>: For transporting weights.
+            </td>
+            <td>OSHA: 1926.1413(c)(2)<br>ASME: Section 5-2.1.3(q)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Swing Mechanism -->
+          <tr>
+            <td>
+              <strong>Swing Mechanism</strong><br>
+              Swing Gear: Rotates the superstructure.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(iv)<br>ASME: Section 5-2.1.3(a)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Hydraulic Swing Motor</em>: Drives the gear mechanism.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(k)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Swing Brake</em>: Locks the crane’s rotation in place.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(iv)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Winch Systems -->
+          <tr>
+            <td>
+              <strong>Winch Systems</strong><br>
+              Main Winch: Drum (Cylindrical reel for wire rope).
+            </td>
+            <td>OSHA: 1926.1413(c)(2)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              &emsp; <em>Brake System</em>: Controls wire rope tension.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(iv)<br>ASME: Section 5-2.1.3(e)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              &emsp; <em>Hydraulic Motor</em>: Powers winch rotation.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(k)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Auxiliary Winch</em>: Smaller Drum (For secondary wire rope).
+            </td>
+            <td>OSHA: 1926.1413(c)(2)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              &emsp; <em>Dedicated Motor</em>: Operates independent of the main winch.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(k)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Hydraulic Pumps -->
+          <tr>
+            <td>
+              <strong>Hydraulic Pumps</strong><br>
+              Gear Pump: Supplies fluid for smaller operations.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(l)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Piston Pump</em>: Handles higher pressure for the boom and winches.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(l)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+        </tbody>
+
+        <!-- 3. Carrier (Chassis) -->
+        <tbody>
+          <tr class="category-row">
+            <td colspan="6"><strong>Carrier (Chassis)</strong></td>
+          </tr>
+
+          <!-- Truck Chassis -->
+          <tr>
+            <td>
+              <strong>Truck Chassis</strong><br>
+              Frame Rails: Reinforced structure supporting the crane.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(i)<br>ASME: Section 5-2.1.3(a)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Axles</em>: Distribute weight and support the wheels.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(ix)<br>ASME: Section 5-2.1.3(o)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Outriggers -->
+          <tr>
+            <td>
+              <strong>Outriggers</strong><br>
+              Telescopic Arms: Extendable arms for stability.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(i)<br>ASME: Section 5-2.1.3(o)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Foot Pads</em>: Distribute weight onto the ground.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(i)<br>ASME: Section 5-2.1.3(a)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Hydraulic Cylinders</em>: Operate the extension and retraction.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(k)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+        </tbody>
+
+        <!-- 4. Load Handling Equipment -->
+        <tbody>
+          <tr class="category-row">
+            <td colspan="6"><strong>Load Handling Equipment</strong></td>
+          </tr>
+
+          <!-- Load Hook -->
+          <tr>
+            <td>
+              <strong>Load Hook</strong><br>
+              Safety Latch: Prevents load from slipping off.
+            </td>
+            <td>OSHA: 1926.1413(c)(2)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Swivel Mechanism</em>: Allows rotation under load.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(ix)<br>ASME: Section 5-2.1.3(o)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Load Line (Wire Rope) -->
+          <tr>
+            <td>
+              <strong>Load Line (Wire Rope)</strong><br>
+              Steel Core: Provides strength and flexibility.
+            </td>
+            <td>OSHA: 1926.1413(c)(2)<br>ASME: Section 5-2.4.1</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Outer Strands</em>: Protect the core and enhance durability.
+            </td>
+            <td>OSHA: 1926.1413(c)(2)<br>ASME: Section 5-2.4.1</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Overhaul Ball -->
+          <tr>
+            <td>
+              <strong>Overhaul Ball</strong><br>
+              Ball Weight: Keeps the wire rope taut.
+            </td>
+            <td>OSHA: 1926.1413(c)(2)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Swivel Assembly</em>: Prevents rope twisting.
+            </td>
+            <td>OSHA: 1926.1413(c)(2)<br>ASME: Section 5-2.1.3(o)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Rigging Hardware -->
+          <tr>
+            <td>
+              <strong>Rigging Hardware</strong><br>
+              Shackles: U-shaped fasteners for load attachment.
+            </td>
+            <td>OSHA: 1926.251(c)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Slings</em>: Nylon, wire rope, or chain straps for securing loads.
+            </td>
+            <td>OSHA: 1926.251(a)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Spreader Bars</em>: Horizontal bars to distribute load weight.
+            </td>
+            <td>OSHA: 1926.251(a)(2)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+        </tbody>
+
+        <!-- 5. Hydraulic Systems -->
+        <tbody>
+          <tr class="category-row">
+            <td colspan="6"><strong>Hydraulic Systems</strong></td>
+          </tr>
+
+          <!-- Hydraulic Cylinders -->
+          <tr>
+            <td>
+              <strong>Hydraulic Cylinders</strong><br>
+              Seals and Gaskets: Prevent leaks.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(l)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Cylinder Rod Ends</em>: Connect to other components.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(k)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Hydraulic Fluid Ports</em>: Entry and exit points for fluid.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(l)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Hydraulic Reservoir -->
+          <tr>
+            <td>
+              <strong>Hydraulic Reservoir</strong><br>
+              Tank Filters: Clean the hydraulic fluid.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(k)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Sight Gauge</em>: Displays fluid levels.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(k)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Hydraulic Lines -->
+          <tr>
+            <td>
+              <strong>Hydraulic Lines</strong><br>
+              High-Pressure Hoses: Transports fluid to cylinders.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(k)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Fittings and Couplings</em>: Secure connections.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(viii)<br>ASME: Section 5-2.1.3(k)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+        </tbody>
+
+        <!-- 6. Safety and Monitoring Systems -->
+        <tbody>
+          <tr class="category-row">
+            <td colspan="6"><strong>Safety and Monitoring Systems</strong></td>
+          </tr>
+
+          <!-- Load Moment Indicator (LMI) -->
+          <tr>
+            <td>
+              <strong>Load Moment Indicator (LMI)</strong><br>
+              Sensors: Measure load weight and boom angle.
+            </td>
+            <td>OSHA: 1926.1416(e)(1)<br>ASME: Section 5-2.1.6</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Display Unit</em>: Shows safety alerts and system status.
+            </td>
+            <td>OSHA: 1926.1416(e)(1)<br>ASME: Section 5-2.1.6</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Anti-Two-Block Device -->
+          <tr>
+            <td>
+              <strong>Anti-Two-Block Device</strong><br>
+              Proximity Switch: Detects the block nearing the boom head.
+            </td>
+            <td>OSHA: 1926.1416(d)(3)<br>ASME: Section 5-2.1.6</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Alarm System</em>: Notifies the operator to prevent collision.
+            </td>
+            <td>OSHA: 1926.1416(d)(3)<br>ASME: Section 5-2.1.6</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Outrigger Pressure Sensors -->
+          <tr>
+            <td>
+              <strong>Outrigger Pressure Sensors</strong><br>
+              Load Cells: Measure force applied to each outrigger.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(xii)<br>ASME: Section 5-2.1.3(o)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Crane Level Indicator -->
+          <tr>
+            <td>
+              <strong>Crane Level Indicator</strong><br>
+              Bubble Level: Simple leveling tool.
+            </td>
+            <td>OSHA: 1926.1416(c)<br>ASME: Section 5-2.1.6</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Digital Level</em>: Provides more precise readings.
+            </td>
+            <td>OSHA: 1926.1416(c)<br>ASME: Section 5-2.1.6</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Radius Indicator -->
+          <tr>
+            <td>
+              <strong>Radius Indicator</strong><br>
+              Mechanical Arm or Sensor: Measures distance from load to crane’s center.
+            </td>
+            <td>OSHA: 1926.1416(c)<br>ASME: Section 5-2.1.6</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+        </tbody>
+
+        <!-- 7. Additional Attachments -->
+        <tbody>
+          <tr class="category-row">
+            <td colspan="6"><strong>Additional Attachments</strong></td>
+          </tr>
+
+          <!-- Fly Jib -->
+          <tr>
+            <td>
+              <strong>Fly Jib</strong><br>
+              Pivoting Mount: Attaches jib to the main boom.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(ix)<br>ASME: Section 5-2.1.3(a)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Extension Pins</em>: Lock the jib in position.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(iv)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Lattice Extensions -->
+          <tr>
+            <td>
+              <strong>Lattice Extensions</strong><br>
+              Cross Bracing: Provides structural integrity.
+            </td>
+            <td>OSHA: 1926.1412(d)(1)(ix)<br>ASME: Section 5-2.1.3(a)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Bolt or Pin Connectors</em>: Secure to the boom.
+            </td>
+            <td>OSHA: 1926.1412(f)(2)(iv)<br>ASME: Section 5-2.1.3(d)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+
+          <!-- Man Basket -->
+          <tr>
+            <td>
+              <strong>Man Basket</strong><br>
+              Fall Protection: Safety harness points.
+            </td>
+            <td>OSHA: 1926.1431(a)<br>ASME: Section 5-2.1.6</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+          <tr>
+            <td>
+              <em>Railings</em>: Prevent falls from the basket.
+            </td>
+            <td>OSHA: 1926.1431(a)<br>ASME: Section 5-2.1.6</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button class="add-picture-btn">Add Picture</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer: Signature or Additional Notes -->
+  <footer>
+    <p>Inspector Signature: __________________________ &nbsp;&nbsp; Date: _______________</p>
+  </footer>
+
+</body>
+</html>
